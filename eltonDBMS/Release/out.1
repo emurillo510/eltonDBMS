@@ -1,0 +1,2012 @@
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>set echo=on 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem TEST1.BAT - test driver for CS157B/CS167B project 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem Clean up 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>del dbfile.bin *.tab *.bak? 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #1 Test setup - create table + insert data 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "create table class ( student char(10), gender char(1), exams int, quiz int, total int )" 
+          create 	1 	 12
+           table 	1 	 13
+           class 	2 	 85
+               ( 	3 	 70
+         student 	2 	 85
+            char 	4 	 11
+               ( 	3 	 70
+              10 	5 	 90
+               ) 	3 	 71
+               , 	3 	 72
+          gender 	2 	 85
+            char 	4 	 11
+               ( 	3 	 70
+               1 	5 	 90
+               ) 	3 	 71
+               , 	3 	 72
+           exams 	2 	 85
+             int 	4 	 10
+               , 	3 	 72
+            quiz 	2 	 85
+             int 	4 	 10
+               , 	3 	 72
+           total 	2 	 85
+             int 	4 	 10
+               ) 	3 	 71
+                 	7 	 95
+CREATE TABLE statement
+The file 'class.dat' was created. 
+The command completed successfully.
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #2 Insert 15 rows of data 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('siu', 'M', 480, 80, 560)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+             siu 	5 	 91
+               , 	3 	 72
+               M 	5 	 91
+               , 	3 	 72
+             480 	5 	 90
+               , 	3 	 72
+              80 	5 	 90
+               , 	3 	 72
+             560 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Frank', 'M', 600, 100, 700)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+           Frank 	5 	 91
+               , 	3 	 72
+               M 	5 	 91
+               , 	3 	 72
+             600 	5 	 90
+               , 	3 	 72
+             100 	5 	 90
+               , 	3 	 72
+             700 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Jordon', 'M', 450, 75, 525)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+          Jordon 	5 	 91
+               , 	3 	 72
+               M 	5 	 91
+               , 	3 	 72
+             450 	5 	 90
+               , 	3 	 72
+              75 	5 	 90
+               , 	3 	 72
+             525 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Jeff', 'M', 455, 60, 515)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+            Jeff 	5 	 91
+               , 	3 	 72
+               M 	5 	 91
+               , 	3 	 72
+             455 	5 	 90
+               , 	3 	 72
+              60 	5 	 90
+               , 	3 	 72
+             515 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Ying', 'F', 540, 85, 625)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+            Ying 	5 	 91
+               , 	3 	 72
+               F 	5 	 91
+               , 	3 	 72
+             540 	5 	 90
+               , 	3 	 72
+              85 	5 	 90
+               , 	3 	 72
+             625 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('David', 'M', 550, 83, 633)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+           David 	5 	 91
+               , 	3 	 72
+               M 	5 	 91
+               , 	3 	 72
+             550 	5 	 90
+               , 	3 	 72
+              83 	5 	 90
+               , 	3 	 72
+             633 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('euna', 'F', 460, 75, 535)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+            euna 	5 	 91
+               , 	3 	 72
+               F 	5 	 91
+               , 	3 	 72
+             460 	5 	 90
+               , 	3 	 72
+              75 	5 	 90
+               , 	3 	 72
+             535 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Victor', 'M', 475, 60, 535)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+          Victor 	5 	 91
+               , 	3 	 72
+               M 	5 	 91
+               , 	3 	 72
+             475 	5 	 90
+               , 	3 	 72
+              60 	5 	 90
+               , 	3 	 72
+             535 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Bad1', 'F', 200, NULL, 220)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+            Bad1 	5 	 91
+               , 	3 	 72
+               F 	5 	 91
+               , 	3 	 72
+             200 	5 	 90
+               , 	3 	 72
+            NULL 	1 	 15
+               , 	3 	 72
+             220 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Linawati', 'F', 490, 86, 576)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+        Linawati 	5 	 91
+               , 	3 	 72
+               F 	5 	 91
+               , 	3 	 72
+             490 	5 	 90
+               , 	3 	 72
+              86 	5 	 90
+               , 	3 	 72
+             576 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Bad2', 'F', 210, NULL, 225)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+            Bad2 	5 	 91
+               , 	3 	 72
+               F 	5 	 91
+               , 	3 	 72
+             210 	5 	 90
+               , 	3 	 72
+            NULL 	1 	 15
+               , 	3 	 72
+             225 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Stephen', 'M', 520, 76, 596)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+         Stephen 	5 	 91
+               , 	3 	 72
+               M 	5 	 91
+               , 	3 	 72
+             520 	5 	 90
+               , 	3 	 72
+              76 	5 	 90
+               , 	3 	 72
+             596 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Parichart', 'F', 450, 76, 526)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+       Parichart 	5 	 91
+               , 	3 	 72
+               F 	5 	 91
+               , 	3 	 72
+             450 	5 	 90
+               , 	3 	 72
+              76 	5 	 90
+               , 	3 	 72
+             526 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Bad3', 'M', NULL, 15, 205)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+            Bad3 	5 	 91
+               , 	3 	 72
+               M 	5 	 91
+               , 	3 	 72
+            NULL 	1 	 15
+               , 	3 	 72
+              15 	5 	 90
+               , 	3 	 72
+             205 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into class values ('Quoc', 'M', 500, 85, 585)" 
+dbfile.bin size = 228
+          insert 	1 	 21
+            into 	1 	 22
+           class 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+            Quoc 	5 	 91
+               , 	3 	 72
+               M 	5 	 91
+               , 	3 	 72
+             500 	5 	 90
+               , 	3 	 72
+              85 	5 	 90
+               , 	3 	 72
+             585 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 28 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #3 & #4 Simple select * & verify headings & verify NULL display with - 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+
+********************************+********************************
+student   gender     exams      quiz     total
+********************************+********************************
+siu       M            480        80       560
+Frank     M            600       100       700
+Jordon    M            450        75       525
+Jeff      M            455        60       515
+Ying      F            540        85       625
+David     M            550        83       633
+euna      F            460        75       535
+Victor    M            475        60       535
+Bad1      F            200         -       220
+Linawati  F            490        86       576
+Bad2      F            210         -       225
+Stephen   M            520        76       596
+Parichart F            450        76       526
+Bad3      M              -        15       205
+Quoc      M            500        85       585
+
+********************************
+15 rows selected.
+The command completed successfully. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #5 Single row delete 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "delete from class where student = 'Bad3'" 
+dbfile.bin size = 228
+          delete 	1 	 24
+            from 	1 	 25
+           class 	2 	 85
+           where 	1 	 26
+         student 	2 	 85
+               = 	3 	 74
+            Bad3 	5 	 91
+                 	7 	 95
+DELETE statement
+column found 
+Process data values. 
+delete into row 
+record length is: 28 
+Number of rows is: 15 
+0 
+column len is: 3 
+siu 
+it is equals 
+column len is: 5 
+Frank 
+it is equals 
+column len is: 6 
+Jordon 
+it is equals 
+column len is: 4 
+Jeff 
+it is equals 
+column len is: 4 
+Ying 
+it is equals 
+column len is: 5 
+David 
+it is equals 
+column len is: 4 
+euna 
+it is equals 
+column len is: 6 
+Victor 
+it is equals 
+column len is: 4 
+Bad1 
+it is equals 
+column len is: 8 
+Linawati 
+it is equals 
+column len is: 4 
+Bad2 
+it is equals 
+column len is: 7 
+Stephen 
+it is equals 
+column len is: 9 
+Parichart 
+it is equals 
+column len is: 4 
+Bad3 
+it is equals 
+point to the last row is 392 
+column len is: 4 
+Quoc 
+it is equals 
+number of rows to write 14 
+
+1 rows are deleted.
+The command completed successfully.
+
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+
+********************************+********************************
+student   gender     exams      quiz     total
+********************************+********************************
+siu       M            480        80       560
+Frank     M            600       100       700
+Jordon    M            450        75       525
+Jeff      M            455        60       515
+Ying      F            540        85       625
+David     M            550        83       633
+euna      F            460        75       535
+Victor    M            475        60       535
+Bad1      F            200         -       220
+Linawati  F            490        86       576
+Bad2      F            210         -       225
+Stephen   M            520        76       596
+Parichart F            450        76       526
+Quoc      M            500        85       585
+
+********************************
+14 rows selected.
+The command completed successfully. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #6 Delete when 0 row matched 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "delete from class where student = 'Nobody'" 
+dbfile.bin size = 228
+          delete 	1 	 24
+            from 	1 	 25
+           class 	2 	 85
+           where 	1 	 26
+         student 	2 	 85
+               = 	3 	 74
+          Nobody 	5 	 91
+                 	7 	 95
+DELETE statement
+column found 
+Process data values. 
+delete into row 
+record length is: 28 
+Number of rows is: 14 
+0 
+column len is: 3 
+siu 
+it is equals 
+column len is: 5 
+Frank 
+it is equals 
+column len is: 6 
+Jordon 
+it is equals 
+column len is: 4 
+Jeff 
+it is equals 
+column len is: 4 
+Ying 
+it is equals 
+column len is: 5 
+David 
+it is equals 
+column len is: 4 
+euna 
+it is equals 
+column len is: 6 
+Victor 
+it is equals 
+column len is: 4 
+Bad1 
+it is equals 
+column len is: 8 
+Linawati 
+it is equals 
+column len is: 4 
+Bad2 
+it is equals 
+column len is: 7 
+Stephen 
+it is equals 
+column len is: 9 
+Parichart 
+it is equals 
+column len is: 4 
+Quoc 
+it is equals 
+number of rows to write 14 
+
+0 rows are deleted.
+The command completed successfully.
+
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+
+********************************+********************************
+student   gender     exams      quiz     total
+********************************+********************************
+siu       M            480        80       560
+Frank     M            600       100       700
+Jordon    M            450        75       525
+Jeff      M            455        60       515
+Ying      F            540        85       625
+David     M            550        83       633
+euna      F            460        75       535
+Victor    M            475        60       535
+Bad1      F            200         -       220
+Linawati  F            490        86       576
+Bad2      F            210         -       225
+Stephen   M            520        76       596
+Parichart F            450        76       526
+Quoc      M            500        85       585
+
+********************************
+14 rows selected.
+The command completed successfully. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #7 Multi-row delete, bad1 and bad2 should be deleted 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "delete from class where total < 250" 
+dbfile.bin size = 228
+          delete 	1 	 24
+            from 	1 	 25
+           class 	2 	 85
+           where 	1 	 26
+           total 	2 	 85
+               < 	3 	 75
+             250 	5 	 90
+                 	7 	 95
+DELETE statement
+column found 
+Process data values. 
+delete into row 
+record length is: 28 
+Number of rows is: 14 
+23 
+column len is: 4 
+560 
+column len is: 4 
+700 
+column len is: 4 
+525 
+column len is: 4 
+515 
+column len is: 4 
+625 
+column len is: 4 
+633 
+column len is: 4 
+535 
+column len is: 4 
+535 
+column len is: 4 
+220 
+numbers are equals 
+point to the last row is: 364
+column len is: 4 
+585 
+column len is: 4 
+576 
+column len is: 4 
+225 
+numbers are equals 
+point to the last row is: 364
+column len is: 4 
+585 
+column len is: 4 
+596 
+number of rows to write 12 
+
+2 rows are deleted.
+The command completed successfully.
+
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+
+********************************+********************************
+student   gender     exams      quiz     total
+********************************+********************************
+siu       M            480        80       560
+Frank     M            600       100       700
+Jordon    M            450        75       525
+Jeff      M            455        60       515
+Ying      F            540        85       625
+David     M            550        83       633
+euna      F            460        75       535
+Victor    M            475        60       535
+Quoc      M            500        85       585
+Linawati  F            490        86       576
+Quoc      M            500        85       585
+Stephen   M            520        76       596
+
+********************************
+12 rows selected.
+The command completed successfully. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #8 Single row update 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "update class set exams = 600 where student = 'David'" 
+dbfile.bin size = 228
+          update 	1 	 27
+           class 	2 	 85
+             set 	1 	 28
+           exams 	2 	 85
+               = 	3 	 74
+             600 	5 	 90
+           where 	1 	 26
+         student 	2 	 85
+               = 	3 	 74
+           David 	5 	 91
+                 	7 	 95
+UPDATE statement
+exams 
+column offset 13 
+student 
+update into row 
+file open 
+record length is: 28 
+siu 	
+Frank 	
+Jordon 	
+Jeff 	
+Ying 	
+David 	
+euna 	
+Victor 	
+Quoc 	
+Linawati 	
+Quoc 	
+Stephen 	
+
+1 rows are updated.
+The command completed successfully.
+
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+
+********************************+********************************
+student   gender     exams      quiz     total
+********************************+********************************
+siu       M            480        80       560
+Frank     M            600       100       700
+Jordon    M            450        75       525
+Jeff      M            455        60       515
+Ying      F            540        85       625
+David     M            550        83       633
+euna      F            460        75       535
+Victor    M            475        60       535
+Quoc      M            500        85       585
+Linawati  F            490        86       576
+Quoc      M            500        85       585
+Stephen   M            520        76       596
+
+********************************
+12 rows selected.
+The command completed successfully. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #9 Update with no row matched 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "update class set exams = 999 where student = 'Nobody'" 
+dbfile.bin size = 228
+          update 	1 	 27
+           class 	2 	 85
+             set 	1 	 28
+           exams 	2 	 85
+               = 	3 	 74
+             999 	5 	 90
+           where 	1 	 26
+         student 	2 	 85
+               = 	3 	 74
+          Nobody 	5 	 91
+                 	7 	 95
+UPDATE statement
+exams 
+column offset 13 
+student 
+update into row 
+file open 
+record length is: 28 
+siu 	
+Frank 	
+Jordon 	
+Jeff 	
+Ying 	
+David 	
+euna 	
+Victor 	
+Quoc 	
+Linawati 	
+Quoc 	
+Stephen 	
+
+0 rows are updated.
+The command completed successfully.
+
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #10 Multi-row updates,  Jordan & Jeff are now 'F' 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "update class set gender = 'F' where total < 526 
+dbfile.bin size = 228
+          update 	1 	 27
+           class 	2 	 85
+             set 	1 	 28
+          gender 	2 	 85
+               = 	3 	 74
+               F 	5 	 91
+           where 	1 	 26
+           total 	2 	 85
+               < 	3 	 75
+             526 	5 	 90
+                 	7 	 95
+UPDATE statement
+gender 
+column offset 11 
+total 
+update into row 
+file open 
+record length is: 28 
+560 
+700 
+525 
+515 
+625 
+633 
+535 
+535 
+585 
+576 
+585 
+596 
+
+10 rows are updated.
+The command completed successfully.
+
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+
+********************************+********************************
+student   gender     exams      quiz     total
+********************************+********************************
+siu       M            480        80       560
+Frank     M            600       100       700
+Jordon    M            450        75       525
+Jeff      M            455        60       515
+Ying      F            540        85       625
+David     M            550        83       633
+euna      F            460        75       535
+Victor    M            475        60       535
+Quoc      M            500        85       585
+Linawati  F            490        86       576
+Quoc      M            500        85       585
+Stephen   M            520        76       596
+
+********************************
+12 rows selected.
+The command completed successfully. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #11 Single column select without WHERE clause 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select student from class 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #12 Multi-column select without WHERE clause 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select total, student from class 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #13 Select with WHERE clause with a single condition 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class where total > 600" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+           where 	1 	 26
+           total 	2 	 85
+               > 	3 	 76
+             600 	5 	 90
+                 	7 	 95
+SELECT statement
+ERROR - TOO_MUCH_DATA 
+
+Error in the string: where
+rc=-372
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #14 Select with where clause and AND keyword 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class where total > 570 and gender = 'M'" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+           where 	1 	 26
+           total 	2 	 85
+               > 	3 	 76
+             570 	5 	 90
+             and 	1 	 34
+          gender 	2 	 85
+               = 	3 	 74
+               M 	5 	 91
+                 	7 	 95
+SELECT statement
+ERROR - TOO_MUCH_DATA 
+
+Error in the string: where
+rc=-372
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #15 Select with where clause and OR keyword 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class where total > 570 or gender = 'F'" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+           where 	1 	 26
+           total 	2 	 85
+               > 	3 	 76
+             570 	5 	 90
+              or 	1 	 35
+          gender 	2 	 85
+               = 	3 	 74
+               F 	5 	 91
+                 	7 	 95
+SELECT statement
+ERROR - TOO_MUCH_DATA 
+
+Error in the string: where
+rc=-372
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class where total > 600" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+           where 	1 	 26
+           total 	2 	 85
+               > 	3 	 76
+             600 	5 	 90
+                 	7 	 95
+SELECT statement
+ERROR - TOO_MUCH_DATA 
+
+Error in the string: where
+rc=-372
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #16 Select with ORDER BY clause 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select student from class order by student" 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class order by total desc" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+           order 	1 	 30
+              by 	1 	 31
+           total 	2 	 85
+            desc 	1 	 32
+                 	7 	 95
+SELECT statement
+ERROR - TOO_MUCH_DATA 
+
+Error in the string: order
+rc=-372
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #17 Select with WHERE and ORDER BY clauses 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class where total > 570 order by total" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+           where 	1 	 26
+           total 	2 	 85
+               > 	3 	 76
+             570 	5 	 90
+           order 	1 	 30
+              by 	1 	 31
+           total 	2 	 85
+                 	7 	 95
+SELECT statement
+ERROR - TOO_MUCH_DATA 
+
+Error in the string: where
+rc=-372
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #18 Select SUM() 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select SUM(quiz) from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+             SUM 	6 	 36
+               ( 	3 	 70
+            quiz 	2 	 85
+               ) 	3 	 71
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+it is an sum 
+column found! 
+we are done processing 
+record length is: 28 
+Number of rows is: 12 
+calculating the average master. 
+column offset is: 18 
+the integer at this block is: 80 
+the integer at this block is: 100 
+the integer at this block is: 75 
+the integer at this block is: 60 
+the integer at this block is: 85 
+the integer at this block is: 83 
+the integer at this block is: 75 
+the integer at this block is: 60 
+the integer at this block is: 85 
+the integer at this block is: 86 
+the integer at this block is: 85 
+the integer at this block is: 76 
+sum is 950.000000 
+avg is 79.166664 
+********************************
+	SUM (quiz)
+	950.000000
+--------------------------------
+	0.00
+0 rows selected.
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #19 Select SUM() with where clause 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select SUM(total) from class where total > 600" 
+dbfile.bin size = 228
+          select 	1 	 29
+             SUM 	6 	 36
+               ( 	3 	 70
+           total 	2 	 85
+               ) 	3 	 71
+            from 	1 	 25
+           class 	2 	 85
+           where 	1 	 26
+           total 	2 	 85
+               > 	3 	 76
+             600 	5 	 90
+                 	7 	 95
+SELECT statement
+it is an sum 
+column found! 
+column found! 
+ERROR - Invalid Relational Operator 
+record length is: 28 
+Number of rows is: 12 
+calculating the average master. 
+column offset is: 23 
+the integer at this block is: 560 
+the integer at this block is: 700 
+the integer at this block is: 525 
+the integer at this block is: 515 
+the integer at this block is: 625 
+the integer at this block is: 633 
+the integer at this block is: 535 
+the integer at this block is: 535 
+the integer at this block is: 585 
+the integer at this block is: 576 
+the integer at this block is: 585 
+the integer at this block is: 596 
+sum is 6970.000000 
+avg is 580.833313 
+where flag 
+********************************
+	SUM (total)
+	6970.000000
+--------------------------------
+	0.00
+0 rows selected.
+
+Error in the string: 
+rc=-376
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #20 Select AVG() 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select AVG(quiz) from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+             AVG 	6 	 37
+               ( 	3 	 70
+            quiz 	2 	 85
+               ) 	3 	 71
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+it is an average 
+column found! 
+we are done processing 
+record length is: 28 
+Number of rows is: 12 
+calculating the average master. 
+column offset is: 18 
+the integer at this block is: 80 
+the integer at this block is: 100 
+the integer at this block is: 75 
+the integer at this block is: 60 
+the integer at this block is: 85 
+the integer at this block is: 83 
+the integer at this block is: 75 
+the integer at this block is: 60 
+the integer at this block is: 85 
+the integer at this block is: 86 
+the integer at this block is: 85 
+the integer at this block is: 76 
+the integer in array is: 80 
+the integer in array is: 100 
+the integer in array is: 75 
+the integer in array is: 60 
+the integer in array is: 85 
+the integer in array is: 83 
+the integer in array is: 75 
+the integer in array is: 60 
+the integer in array is: 85 
+the integer in array is: 86 
+the integer in array is: 85 
+the integer in array is: 76 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+0 
+********************************
+	AVG (quiz)
+	0.000000
+--------------------------------
+	0.00
+0 rows selected.
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #21 Select AVG() with where clause 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select AVG(total) from class where total > 600" 
+dbfile.bin size = 228
+          select 	1 	 29
+             AVG 	6 	 37
+               ( 	3 	 70
+           total 	2 	 85
+               ) 	3 	 71
+            from 	1 	 25
+           class 	2 	 85
+           where 	1 	 26
+           total 	2 	 85
+               > 	3 	 76
+             600 	5 	 90
+                 	7 	 95
+SELECT statement
+it is an average 
+column found! 
+column found! 
+ERROR - Invalid Relational Operator 
+
+Error in the string: 
+rc=-376
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #22 Select COUNT() 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select COUNT(*) from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+           COUNT 	6 	 38
+               ( 	3 	 70
+               * 	3 	 73
+               ) 	3 	 71
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+it is an count 
+ERROR - Invalid Column Name. 
+********************************
+	COUNT (column name)
+--------------------------------
+	0.00
+0 rows selected.
+
+Error in the string: class
+rc=-395
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #23 Select COUNT() with where clause 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select COUNT(total) from class where total > 600" 
+dbfile.bin size = 228
+          select 	1 	 29
+           COUNT 	6 	 38
+               ( 	3 	 70
+           total 	2 	 85
+               ) 	3 	 71
+            from 	1 	 25
+           class 	2 	 85
+           where 	1 	 26
+           total 	2 	 85
+               > 	3 	 76
+             600 	5 	 90
+                 	7 	 95
+SELECT statement
+it is an count 
+column found! 
+column found! 
+ERROR - Invalid Relational Operator 
+********************************
+	COUNT (column name)
+--------------------------------
+	0.00
+0 rows selected.
+
+Error in the string: 
+rc=-376
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #24 Test SUM(), AVG() when there are NULLs. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+
+********************************+********************************
+student   gender     exams      quiz     total
+********************************+********************************
+siu       M            480        80       560
+Frank     M            600       100       700
+Jordon    M            450        75       525
+Jeff      M            455        60       515
+Ying      F            540        85       625
+David     M            550        83       633
+euna      F            460        75       535
+Victor    M            475        60       535
+Quoc      M            500        85       585
+Linawati  F            490        86       576
+Quoc      M            500        85       585
+Stephen   M            520        76       596
+
+********************************
+12 rows selected.
+The command completed successfully. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "update class set exams = NULL where student = 'David'"  
+dbfile.bin size = 228
+          update 	1 	 27
+           class 	2 	 85
+             set 	1 	 28
+           exams 	2 	 85
+               = 	3 	 74
+            NULL 	1 	 15
+           where 	1 	 26
+         student 	2 	 85
+               = 	3 	 74
+           David 	5 	 91
+                 	7 	 95
+UPDATE statement
+exams 
+column offset 13 
+student 
+update into row 
+file open 
+record length is: 28 
+siu 	
+Frank 	
+Jordon 	
+Jeff 	
+Ying 	
+David 	
+euna 	
+Victor 	
+Quoc 	
+Linawati 	
+Quoc 	
+Stephen 	
+
+1 rows are updated.
+The command completed successfully.
+
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "update class set quiz = NULL where student = 'Stephen'"  
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select avg(exams) from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+             avg 	6 	 37
+               ( 	3 	 70
+           exams 	2 	 85
+               ) 	3 	 71
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+it is an average 
+column found! 
+we are done processing 
+record length is: 28 
+Number of rows is: 12 
+calculating the average master. 
+column offset is: 13 
+the integer at this block is: 480 
+the integer at this block is: 600 
+the integer at this block is: 450 
+the integer at this block is: 455 
+the integer at this block is: 540 
+the integer at this block is: 550 
+the integer at this block is: 460 
+the integer at this block is: 475 
+the integer at this block is: 500 
+the integer at this block is: 490 
+the integer at this block is: 500 
+the integer at this block is: 520 
+the integer in array is: 480 
+the integer in array is: 600 
+the integer in array is: 450 
+the integer in array is: 455 
+the integer in array is: 540 
+the integer in array is: 550 
+the integer in array is: 460 
+the integer in array is: 475 
+the integer in array is: 500 
+the integer in array is: 490 
+the integer in array is: 500 
+the integer in array is: 520 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+the integer where_array_of_int is: 0 
+0 
+********************************
+	AVG (exams)
+	0.000000
+--------------------------------
+	0.00
+0 rows selected.
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select sum(quiz) from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+             sum 	6 	 36
+               ( 	3 	 70
+            quiz 	2 	 85
+               ) 	3 	 71
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+it is an sum 
+column found! 
+we are done processing 
+record length is: 28 
+Number of rows is: 12 
+calculating the average master. 
+column offset is: 18 
+the integer at this block is: 80 
+the integer at this block is: 100 
+the integer at this block is: 75 
+the integer at this block is: 60 
+the integer at this block is: 85 
+the integer at this block is: 83 
+the integer at this block is: 75 
+the integer at this block is: 60 
+the integer at this block is: 85 
+the integer at this block is: 86 
+the integer at this block is: 85 
+the integer at this block is: 76 
+sum is 950.000000 
+avg is 79.166664 
+********************************
+	SUM (quiz)
+	950.000000
+--------------------------------
+	0.00
+0 rows selected.
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #25 Test COUNT(*), COUNT(Quiz_Total) when there are NULLs. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select COUNT(*) from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+           COUNT 	6 	 38
+               ( 	3 	 70
+               * 	3 	 73
+               ) 	3 	 71
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+it is an count 
+ERROR - Invalid Column Name. 
+********************************
+	COUNT (column name)
+--------------------------------
+	0.00
+0 rows selected.
+
+Error in the string: class
+rc=-395
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select COUNT(exams) from class" 
+dbfile.bin size = 228
+          select 	1 	 29
+           COUNT 	6 	 38
+               ( 	3 	 70
+           exams 	2 	 85
+               ) 	3 	 71
+            from 	1 	 25
+           class 	2 	 85
+                 	7 	 95
+SELECT statement
+it is an count 
+column found! 
+we are done processing 
+********************************
+	COUNT (column name)
+--------------------------------
+	0.00
+0 rows selected.
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem Error Testing Section 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem Setup the table 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "create table test (col1 char(10), col2 int, col3 int not null)" 
+dbfile.bin size = 228
+          create 	1 	 12
+           table 	1 	 13
+            test 	2 	 85
+               ( 	3 	 70
+            col1 	2 	 85
+            char 	4 	 11
+               ( 	3 	 70
+              10 	5 	 90
+               ) 	3 	 71
+               , 	3 	 72
+            col2 	2 	 85
+             int 	4 	 10
+               , 	3 	 72
+            col3 	2 	 85
+             int 	4 	 10
+             not 	1 	 14
+            null 	1 	 15
+               ) 	3 	 71
+                 	7 	 95
+CREATE TABLE statement
+The file 'test.dat' was created. 
+The command completed successfully.
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into test values ( 'one', 1, 11 )" 
+dbfile.bin size = 372
+          insert 	1 	 21
+            into 	1 	 22
+            test 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+             one 	5 	 91
+               , 	3 	 72
+               1 	5 	 90
+               , 	3 	 72
+              11 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 21 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into test values ( 'two', 2, 22 )" 
+dbfile.bin size = 372
+          insert 	1 	 21
+            into 	1 	 22
+            test 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+             two 	5 	 91
+               , 	3 	 72
+               2 	5 	 90
+               , 	3 	 72
+              22 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+insert into row 
+record length is 21 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from test" 
+dbfile.bin size = 372
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+            test 	2 	 85
+                 	7 	 95
+SELECT statement
+
+********************************+********************************
+col1            col2      col3
+********************************+********************************
+one                1        11
+two                2        22
+
+********************************
+2 rows selected.
+The command completed successfully. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #26 "syntax errors in various INSERT statement combinations" 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into test ( 'not_null', 1, '11' )" 
+dbfile.bin size = 372
+          insert 	1 	 21
+            into 	1 	 22
+            test 	2 	 85
+               ( 	3 	 70
+        not_null 	5 	 91
+               , 	3 	 72
+               1 	5 	 90
+               , 	3 	 72
+              11 	5 	 91
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+ERROR - Missing Keyword Values.
+Error in the string: (
+rc=-387
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into test values ( 'not_null', 1 )" 
+dbfile.bin size = 372
+          insert 	1 	 21
+            into 	1 	 22
+            test 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+        not_null 	5 	 91
+               , 	3 	 72
+               1 	5 	 90
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+NOT_ENOUGH_DATA 
+
+Error in the string: )
+rc=-380
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #27 "syntax errors in various UPDATE statement combinations" 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "update test set col5 = NULL where col2 = 1" 
+dbfile.bin size = 372
+          update 	1 	 27
+            test 	2 	 85
+             set 	1 	 28
+            col5 	2 	 85
+               = 	3 	 74
+            NULL 	1 	 15
+           where 	1 	 26
+            col2 	2 	 85
+               = 	3 	 74
+               1 	5 	 90
+                 	7 	 95
+UPDATE statement
+ERROR - Invalid column name. 
+
+Error in the string: col5
+rc=-395
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "update test5 set col3 = NULL where col2 = 1" 
+dbfile.bin size = 372
+          update 	1 	 27
+           test5 	2 	 85
+             set 	1 	 28
+            col3 	2 	 85
+               = 	3 	 74
+            NULL 	1 	 15
+           where 	1 	 26
+            col2 	2 	 85
+               = 	3 	 74
+               1 	5 	 90
+                 	7 	 95
+UPDATE statement
+ERROR - No Such a Table Existed. 
+
+Error in the string: test5
+rc=-397
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #28 "syntax errors in various SELECT statement combinations" 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select col1, * from test" 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select count(*) from test order by col2" 
+dbfile.bin size = 372
+          select 	1 	 29
+           count 	6 	 38
+               ( 	3 	 70
+               * 	3 	 73
+               ) 	3 	 71
+            from 	1 	 25
+            test 	2 	 85
+           order 	1 	 30
+              by 	1 	 31
+            col2 	2 	 85
+                 	7 	 95
+SELECT statement
+it is an count 
+ERROR - Invalid Column Name. 
+********************************
+	COUNT (column name)
+--------------------------------
+	0.00
+0 rows selected.
+
+Error in the string: test
+rc=-395
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select col1, count(col2) from test" 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select col5 from test" 
+dbfile.bin size = 372
+          select 	1 	 29
+            col5 	2 	 85
+            from 	1 	 25
+            test 	2 	 85
+                 	7 	 95
+SELECT statement
+The record length is: 21
+ERROR - Invalid Column Name 
+record length is: 21 
+Number of rows is: 2 
+
+Error in the string: test
+rc=-395
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #29 "data type mismatch" 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into test values ( 'not_null', 1, 'string' )" 
+dbfile.bin size = 372
+          insert 	1 	 21
+            into 	1 	 22
+            test 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+        not_null 	5 	 91
+               , 	3 	 72
+               1 	5 	 90
+               , 	3 	 72
+          string 	5 	 91
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+INVALID_DATA_TYPE 
+
+Error in the string: string
+rc=-383
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #30 NOT NULL on inserts 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "insert into test values ( 'not_null', 1, NULL )" 
+dbfile.bin size = 372
+          insert 	1 	 21
+            into 	1 	 22
+            test 	2 	 85
+          values 	1 	 23
+               ( 	3 	 70
+        not_null 	5 	 91
+               , 	3 	 72
+               1 	5 	 90
+               , 	3 	 72
+            NULL 	1 	 15
+               ) 	3 	 71
+                 	7 	 95
+INSERT statement
+NULL_NOT_ALLOWED 
+
+Error in the string: NULL
+rc=-381
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem  
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #31 NOT NULL updates 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "update test set col3 = NULL where col2 = 1" 
+dbfile.bin size = 372
+          update 	1 	 27
+            test 	2 	 85
+             set 	1 	 28
+            col3 	2 	 85
+               = 	3 	 74
+            NULL 	1 	 15
+           where 	1 	 26
+            col2 	2 	 85
+               = 	3 	 74
+               1 	5 	 90
+                 	7 	 95
+UPDATE statement
+col3 
+column offset 16 
+col2 
+update into row 
+file open 
+record length is: 21 
+1 
+2 
+
+1 rows are updated.
+The command completed successfully.
+
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #32 Catch “data type mismatch” errors on WHERE clauses of update, delete, select. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "update test set col3 = 'Frank' where col2 = 2" 
+dbfile.bin size = 372
+          update 	1 	 27
+            test 	2 	 85
+             set 	1 	 28
+            col3 	2 	 85
+               = 	3 	 74
+           Frank 	5 	 91
+           where 	1 	 26
+            col2 	2 	 85
+               = 	3 	 74
+               2 	5 	 90
+                 	7 	 95
+UPDATE statement
+col3 
+column offset 16 
+ERROR - Invalid Data Type. 
+col2 
+
+Error in the string: Frank
+rc=-383
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "delete from test where col2 = 'two'" 
+dbfile.bin size = 372
+          delete 	1 	 24
+            from 	1 	 25
+            test 	2 	 85
+           where 	1 	 26
+            col2 	2 	 85
+               = 	3 	 74
+             two 	5 	 91
+                 	7 	 95
+DELETE statement
+column found 
+Process data values. 
+delete into row 
+record length is: 21 
+Number of rows is: 2 
+11 
+number of rows to write 2 
+
+0 rows are deleted.
+The command completed successfully.
+
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from test where col1 > 200" 
+dbfile.bin size = 372
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+            test 	2 	 85
+           where 	1 	 26
+            col1 	2 	 85
+               > 	3 	 76
+             200 	5 	 90
+                 	7 	 95
+SELECT statement
+ERROR - TOO_MUCH_DATA 
+
+Error in the string: where
+rc=-372
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #33. “invalid data value” errors. 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "update test set col1 = 'stringlargerthan10' where col2 = 2" 
+dbfile.bin size = 372
+          update 	1 	 27
+            test 	2 	 85
+             set 	1 	 28
+            col1 	2 	 85
+               = 	3 	 74
+stringlargerthan10 	5 	 91
+           where 	1 	 26
+            col2 	2 	 85
+               = 	3 	 74
+               2 	5 	 90
+                 	7 	 95
+UPDATE statement
+col1 
+column offset 0 
+col2 
+update into row 
+file open 
+record length is: 21 
+1 
+2 
+
+1 rows are updated.
+The command completed successfully.
+
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem #34. "invalid relational operator" & "invalid aggregate function parameter" errors 
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select * from test where col2 not = 100" 
+dbfile.bin size = 372
+          select 	1 	 29
+               * 	3 	 73
+            from 	1 	 25
+            test 	2 	 85
+           where 	1 	 26
+            col2 	2 	 85
+             not 	1 	 14
+               = 	3 	 74
+             100 	5 	 90
+                 	7 	 95
+SELECT statement
+ERROR - TOO_MUCH_DATA 
+
+Error in the string: where
+rc=-372
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>db "select AVG(col1) from test" 
+dbfile.bin size = 372
+          select 	1 	 29
+             AVG 	6 	 37
+               ( 	3 	 70
+            col1 	2 	 85
+               ) 	3 	 71
+            from 	1 	 25
+            test 	2 	 85
+                 	7 	 95
+SELECT statement
+it is an average 
+column found! 
+we are done processing 
+record length is: 21 
+Number of rows is: 2 
+ERROR - Only INT_TYPE Allowed.
+0 
+********************************
+	AVG (col1)
+	0.000000
+--------------------------------
+	0.00
+0 rows selected.
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem
+
+C:\Users\elton\Documents\Visual Studio 2010\Projects\CS167B_Project\Release>rem End of test1.bat 
